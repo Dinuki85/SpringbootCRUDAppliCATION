@@ -19,10 +19,17 @@ export default function EditUser() {
     setUser({ ...user, [e.target.name]: e.target.value }); //keep on adding the new Object
   };
 
-  useEffect(()=>{
-    loadUser();
-  },[])
-
+  useEffect(() => {
+    const loadUser = async () => {
+      try {
+        const result = await axios.get(`http://localhost:8080/api/user/${id}`);
+        setUser(result.data);
+      } catch (error) {
+        console.error("Error loading user:", error);
+      }
+    };
+      loadUser();
+  }, [id]); //
   /*create users and send those details to the database and show it*/
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -32,10 +39,7 @@ export default function EditUser() {
     navigate("/");
   };
 
-  const loadUser=async()=>{
-    const result =await axios.get(`http://localhost:8080/api/user/${id}`)
-    setUser(result.data);
-  }
+  
   return (
     <div className="container">
       <h1>EDIT THE USERS</h1>

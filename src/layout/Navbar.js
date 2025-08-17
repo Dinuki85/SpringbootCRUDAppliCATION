@@ -4,7 +4,7 @@ export const Navbar = () => {
   return (
     <div>
       {/*Navigation bar code from the bootstrap*/}
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand text-decoration-none text-dark" href="/">
             CRUD

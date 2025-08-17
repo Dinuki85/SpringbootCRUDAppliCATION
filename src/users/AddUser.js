@@ -74,7 +74,7 @@ export default function AddUser() {
               Add User
             </button>
 
-            <Link  className="btn btn-danger mx-2" to="/">
+            <Link className="btn btn-danger mx-2" to="/">
               Cancel User
             </Link>
           </form>

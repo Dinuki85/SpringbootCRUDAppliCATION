@@ -19,18 +19,19 @@ export default function AddUser() {
   };
 
   /*create users and send those details to the database and show it*/
-  const onSubmit  =async (e)=>{
+  const onSubmit  = async (e) => {
     e.preventDefault();
     await axios.post("http://localhost:8080/api/user/adduser",user)
 
-    navigate("/")
+    /*After adding users again navigate to the home page */
+    navigate("/");
   }
   return (
     <div className="container">
       <h1>ADD USERS FROM HERE</h1>
       <div className="row">
         <div className="shadow col-md-6 offset-md-3 border rounded p-4 mt-2">
-         <form onSubmit={(e)=>onSubmit(e)}>
+         <form onSubmit={(e) => onSubmit(e)}>
           <div className="mb-3">
             <label htmlFor="Name" className="form-lable">
               <strong>Full Name</strong>
@@ -38,28 +39,28 @@ export default function AddUser() {
             <input
               type={"text"}
               className="form-control"
-              placeholder="Enter Name here"
+              placeholder="Enter Your Full Name"
               name="name"
               value={name}
               onChange={(e) => onInputChange(e)}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="Name" className="form-lable ">
+            <label htmlFor="Username" className="form-lable ">
               <strong>User Name</strong>
             </label>
             <input
               type={"text"}
               className="form-control "
-              placeholder="Enter Your User Name Here"
-              name="name"
+              placeholder="Enter Your User Name "
+              name="username"
               value={username}
               onChange={(e) => onInputChange(e)}
             />
           </div>
           <div className="mb-3">
             <label htmlFor="Email" className="form-lable">
-              <strong>Email</strong>
+              <strong>E-mail</strong>
             </label>
             <input
               type={"text"}

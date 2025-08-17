@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Home() {
   /*Create Object for storing the user information */
   const [users, setUsers] = useState([]);
+//use useParams to pass the user id to delete the users
+
+const {id} = useParams();
 
   useEffect(() => {
     loadUsers();
@@ -16,6 +19,11 @@ export default function Home() {
     setUsers(result.data); /*To print the result from the database*/
   };
 
+  //For deleting the users
+  const deleteUser = async (id)=>{
+    await axios.delete(`http://localhost:8080/api/user/${id}`)
+    loadUsers();
+  }
   return (
     <div className="container ">
       <div className="py-5">
@@ -44,7 +52,7 @@ export default function Home() {
                 <Link className="btn btn-primary mx-2" to={`/edituser/${user.id}`}>
                 Update
                 </Link>
-                <button className="btn btn-danger mx-2">Delete</button>
+                <button className="btn btn-danger mx-2" onClick={()=>deleteUser(user.id)}>Delete</button>
 
               </td>
             </tr>

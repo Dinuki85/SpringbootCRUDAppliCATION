@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <div className="container ">
       <div className="py-5">
+          <h1 className='text-center bold'>VIEW USERS FROM HERE</h1>
         {/*Adding Bootstrap table */}
         <table className="table border table-hover  shadow">
           <thead>

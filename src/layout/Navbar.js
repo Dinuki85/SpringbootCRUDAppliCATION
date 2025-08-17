@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -22,9 +23,9 @@ export const Navbar = () => {
           </button>
 
           {/*Add button to add the user functinality */}
-          <button className="btn btn-outline-dark btn-color-blue">
+          <Link className="btn btn-outline-dark btn-color-blue" to ="/addUser">
             Add User
-          </button>
+          </Link>
         </div>
       </nav>
     </div>

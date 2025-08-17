@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 export default function AddUser() {
@@ -10,14 +11,21 @@ export default function AddUser() {
   const { name, username, email } = user;
 
   const onInputChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    setUser({ ...user, [e.target.name]: e.target.value });//keep on adding the new Object
   };
 
+  /*create users and send those details to the database and show it*/
+  const onSubmit  =async (e)=>{
+    e.preventDefault();
+    await axios.post("http://localhost:8080/api/user/adduser",user)
+
+  }
   return (
     <div className="container">
       <h1>ADD USERS FROM HERE</h1>
       <div className="row">
         <div className="shadow col-md-6 offset-md-3 border rounded p-4 mt-2">
+         <form onSubmit={(e)=>onSubmit(e)}>
           <div className="mb-3">
             <label htmlFor="Name" className="form-lable">
               <strong>Full Name</strong>
@@ -64,6 +72,7 @@ export default function AddUser() {
           <button type="submit" className="btn btn-danger mx-2">
             Cancel User
           </button>
+          </form>
         </div>
       </div>
     </div>

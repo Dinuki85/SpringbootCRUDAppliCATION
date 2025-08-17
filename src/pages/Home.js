@@ -22,10 +22,10 @@ export default function Home() {
         <table className="table border table-hover  shadow">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">Id</th>
+              <th scope="col">Full Name</th>
+              <th scope="col">User Name</th>
+              <th scope="col">User Email</th>
             </tr>
           </thead>
           <tbody>

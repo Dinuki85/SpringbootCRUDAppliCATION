@@ -21,8 +21,10 @@ export const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-{/*Add button to add the user functinality */}
-          <button className="btn btn-outline-dark btn-color-blue">Add User</button>
+          {/*Add button to add the user functinality */}
+          <button className="btn btn-outline-dark btn-color-blue">
+            Add User
+          </button>
         </div>
       </nav>
     </div>

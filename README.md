@@ -89,3 +89,12 @@ src/main/java/com/example/CRUDApplication
 
 * Delete user: DELETE /{id}
 
+
+  ---
+  ### 📦 Demo
+  <img width="1918" height="1008" alt="getuserById" src="https://github.com/user-attachments/assets/9d8be00e-58fe-471c-8f58-ec9a793ca73f" />
+  <img width="1917" height="1007" alt="getusers" src="https://github.com/user-attachments/assets/4d50954a-9654-4169-a6db-2a276a3bf1d9" />
+
+ 
+
+

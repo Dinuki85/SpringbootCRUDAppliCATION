@@ -40,7 +40,7 @@ export default function EditUser() {
     <div className="container">
       <h1>EDIT THE USERS</h1>
       <div className="row">
-        <div className="shadow col-md-6 offset-md-3 border rounded p-4 mt-2">
+        <div className="p-4 mt-2 border rounded shadow col-md-6 offset-md-3">
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="mb-3">
               <label htmlFor="Name" className="form-lable">
@@ -82,10 +82,10 @@ export default function EditUser() {
               />
             </div>
             <button type="submit" className="btn btn-primary ">
-              Add User
+             Update User
             </button>
 
-            <Link className="btn btn-danger mx-2" to="/">
+            <Link className="mx-2 btn btn-danger" to="/">
               Cancel User
             </Link>
           </form>

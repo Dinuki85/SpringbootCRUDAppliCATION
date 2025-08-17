@@ -1,7 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AddUser() {
+
+  let navigate = useNavigate();
+
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -19,6 +23,7 @@ export default function AddUser() {
     e.preventDefault();
     await axios.post("http://localhost:8080/api/user/adduser",user)
 
+    navigate("/")
   }
   return (
     <div className="container">

@@ -5,6 +5,7 @@ import { Navbar } from "./layout/Navbar";
 function App() {
   return (
     <div className="App">
+      {/* Import the navigation bar*/}
       <Navbar/>
 
       <h1 className='text-center'>Create CRUD application</h1>

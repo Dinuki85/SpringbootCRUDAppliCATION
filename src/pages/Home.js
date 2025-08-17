@@ -5,7 +5,7 @@ export default function Home() {
     <div className="container ">
       <div className="py-5">
         {/*Adding Bootstrap table */}
-        <table class="table table-hover">
+        <table className="table border table-hover  shadow">
           <thead>
             <tr>
               <th scope="col">#</th>

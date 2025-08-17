@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   /*Create Object for storing the user information */
   const [users, setUsers] = useState([]);
-//use useParams to pass the user id to delete the users
-
-const {id} = useParams();
 
   useEffect(() => {
     loadUsers();
@@ -29,7 +26,7 @@ const {id} = useParams();
       <div className="py-5">
           <h1 className='text-center bold'>VIEW USERS FROM HERE</h1>
         {/*Adding Bootstrap table */}
-        <table className="table border table-hover  shadow">
+        <table className="table border shadow table-hover">
           <thead>
             <tr>
               <th scope="col">Id</th>
@@ -42,17 +39,17 @@ const {id} = useParams();
           <tbody>
             {/*Map the details that need to displayed in the table */}
             {users.map((user,index) =>(
-                 <tr>
-              <th scope="row" key={index}>{index+1}</th>
+                 <tr  key={index}>
+              <th scope="row">{index+1}</th>
               <td>{user.name}</td>
               <td>{user.username}</td>
               <td>{user.email}</td>
               <td>
-                <button className="btn btn-outline-primary mx-2"><strong>View</strong></button>
-                <Link className="btn btn-primary mx-2" to={`/edituser/${user.id}`}>
+                <Link className="mx-2 btn btn-outline-primary" to={`/viewuser/${user.id}`}><strong>View</strong></Link>
+                <Link className="mx-2 btn btn-primary" to={`/edituser/${user.id}`}>
                 Update
                 </Link>
-                <button className="btn btn-danger mx-2" onClick={()=>deleteUser(user.id)}>Delete</button>
+                <button className="mx-2 btn btn-danger" onClick={()=>deleteUser(user.id)}>Delete</button>
 
               </td>
             </tr>

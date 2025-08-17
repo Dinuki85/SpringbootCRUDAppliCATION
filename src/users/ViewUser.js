@@ -11,16 +11,19 @@ export default function ViewUser() {
 
     const {id} =useParams();
 
-    useEffect(()=>{
-
-        loadUser();
-
-    },[]);
-
-    const loadUser=async ()=>{
-        const result =await axios.get(`http://localhost:8080/api/user/${id}`)
-        setUser(result.data);
+   useEffect(() => {
+  const fetchUser = async () => {
+    try {
+      const result = await axios.get(`http://localhost:8080/api/user/${id}`);
+      setUser(result.data);
+    } catch (error) {
+      console.error("Error fetching user:", error);
     }
+  };
+
+  fetchUser();
+}, [id]); // depends only on id
+
   return (
     <div className="container">
       <h1>VIEW USERS DETAILS </h1>
@@ -46,7 +49,7 @@ export default function ViewUser() {
                 </div>
             </div>
 
-            <Link className="my-2 btn btn-outline " to={"/"}>Back To Home</Link>
+            <Link className="my-2 btn btn-outline-primary " to={"/"}>Back To Home</Link>
 
         </div>
       

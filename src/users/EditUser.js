@@ -1,9 +1,11 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function EditUser() {
   let navigate = useNavigate();
+
+  const {id}=useParams();
 
   const [user, setUser] = useState({
     name: "",
@@ -17,14 +19,23 @@ export default function EditUser() {
     setUser({ ...user, [e.target.name]: e.target.value }); //keep on adding the new Object
   };
 
+  useEffect(()=>{
+    loadUser();
+  },[])
+
   /*create users and send those details to the database and show it*/
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/api/user/adduser", user);
+    await axios.put(`http://localhost:8080/api/user/${id}`, user);
 
     /*After adding users again navigate to the home page */
     navigate("/");
   };
+
+  const loadUser=async()=>{
+    const result =await axios.get(`http://localhost:8080/api/user/${id}`)
+    setUser(result.data);
+  }
   return (
     <div className="container">
       <h1>EDIT THE USERS</h1>

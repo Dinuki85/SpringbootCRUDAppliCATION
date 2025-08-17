@@ -25,25 +25,28 @@ export default function ViewUser() {
     <div className="container">
       <h1>VIEW USERS DETAILS </h1>
       <div className="row">
-        <div className="shadow col-md-6 offset-md-3 border rounded p-4 mt-2">
+        <div className="p-4 mt-2 border rounded shadow col-md-6 offset-md-3">
             <div className="card">
                 <div className="card-header">
-                    Use id details:
+                    Use id details:{user.id}
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">
                             <b>Full Name:</b>
+                            {user.name}
                         </li>
                         <li className="list-group-item">
                             <b>User Name:</b>
+                            {user.username}
                         </li>
                         <li className="list-group-item">
                             <b>User Email:</b>
+                            {user.email}
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <Link className="btn btn-outline my-2 " to={"/"}>Back To Home</Link>
+            <Link className="my-2 btn btn-outline " to={"/"}>Back To Home</Link>
 
         </div>
       

@@ -7,7 +7,7 @@ export const Navbar = () => {
       <nav class="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand text-decoration-none text-dark" href="/">
-            Navbar
+            CRUD
           </a>
           <button
             className="navbar-toggler"
@@ -20,6 +20,9 @@ export const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
+{/*Add button to add the user functinality */}
+          <button className="btn btn-outline-dark btn-color-blue">Add User</button>
         </div>
       </nav>
     </div>

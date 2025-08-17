@@ -84,6 +84,8 @@ This project frontend is built with **React.js**, **Bootstrap 5**, and **Axios**
 
 
 ## Demo
+<img width="1907" height="901" alt="userManagementSystem" src="https://github.com/user-attachments/assets/c0d57452-b93b-4f56-8e90-6e8d777c0f37" />
+
 ---
 ## Installation
 
@@ -111,6 +113,7 @@ npm start
 ## Author
 
 - [Dinuki Prarthana](https://github.com/Dinuki85/SpringbootCRUDAppliCATION)
+- Full Stack Web Developer
 
 
 

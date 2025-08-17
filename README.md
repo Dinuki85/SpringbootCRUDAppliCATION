@@ -73,6 +73,45 @@ This project frontend is built with **React.js**, **Bootstrap 5**, and **Axios**
 3. User clicks **Edit** ✏️ → Goes to **Edit User** page to update info.
 4. User clicks **Delete** ❌ → User removed from backend and table updated.
 5. User clicks **Add User** ➕ → Goes to **Add User** page to create a new user.
+---
+## Acknowledgements
+
+- [React](https://reactjs.org/) ⚛️
+- [Bootstrap](https://getbootstrap.com/) 💅
+- [Axios](https://axios-http.com/) 🌊
+- [React Router DOM](https://reactrouter.com/) 🛣️
+---
+
+
+## Demo
+---
+## Installation
+
+Follow these steps to set up the frontend locally:
+
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+ ````
+ ````
+cd your-repo/frontend
+
+````
+ ````
+npm install
+
+
+````
+````
+npm start
+
+````
+---
+
+## Author
+
+- [Dinuki Prarthana](https://github.com/Dinuki85/SpringbootCRUDAppliCATION)
+
 
 
 

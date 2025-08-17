@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Home() {
+  /*Create Object for storing the user information */
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    loadUsers();
+  }, []);
+
+  /*Connecting with the backend */
+  const loadUsers = async () => {
+    const result = await axios.get("http://localhost:8080/api/user/getusers");
+    console.log(result); /*To print the result*/
+  };
+
   return (
     <div className="container ">
       <div className="py-5">

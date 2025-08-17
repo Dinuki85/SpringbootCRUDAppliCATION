@@ -12,7 +12,7 @@ export default function Home() {
   /*Connecting with the backend */
   const loadUsers = async () => {
     const result = await axios.get("http://localhost:8080/api/user/getusers");
-    console.log(result); /*To print the result*/
+    console.log(result.data); /*To print the result*/
   };
 
   return (

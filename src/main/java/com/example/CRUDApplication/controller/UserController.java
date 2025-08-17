@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/user")
-@CrossOrigin("http://localhost:3000/ ")
+@CrossOrigin("http://localhost:3000/")
 public class UserController {
     @Autowired
     private UserRepository userRepository;
@@ -52,7 +52,7 @@ public class UserController {
             throw new UserNotFoundException(id);
         }
         userRepository.deleteById(id);
-        return "User deleted successfully with the id"+id;
+        return "User deleted successfully with the id  "+id;
     }
 
 

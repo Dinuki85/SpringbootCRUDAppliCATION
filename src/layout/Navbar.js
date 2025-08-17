@@ -6,7 +6,7 @@ export const Navbar = () => {
       {/*Navigation bar code from the bootstrap*/}
       <nav class="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <a className="nnavbar-brand text-decoration-none text-dark" href="/">
+          <a className="navbar-brand text-decoration-none text-dark" href="/">
             Navbar
           </a>
           <button

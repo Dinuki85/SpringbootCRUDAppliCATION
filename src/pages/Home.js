@@ -24,17 +24,20 @@ export default function Home() {
 
   // Background style
   const backgroundStyle = {
-    backgroundImage: "url('/assets/background.jpg')", // replace with your image path
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    width: "100vw",
-    height: "100vh",
-    position: "fixed",
-    top: 0,
-    left: 0,
-    zIndex: -1,
-  };
+  backgroundImage: "url('/assets/background.jpg')", // replace with your image path
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundColor: "transparent", // <-- use this
+  width: "100vw",
+  height: "100vh",
+  position: "fixed",
+  top: 0,
+  left: 0,
+  zIndex: -1,
+  opacity: 0.5, 
+};
+
 
   return (
     <div>
@@ -43,7 +46,7 @@ export default function Home() {
 
       {/* Main content */}
       <div className="container py-5" style={{ position: "relative", zIndex: 1 }}>
-        <h1 className="mb-4 text-center text-white bold">
+        <h1 className="mb-4 text-center text-black bold">
           VIEW USERS FROM HERE
         </h1>
         {/*Interactive Bootstrap table with hover and striped rows */}

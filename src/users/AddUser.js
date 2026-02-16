@@ -29,7 +29,7 @@ export default function AddUser() {
     <div className="container">
       <h1>ADD USERS FROM HERE</h1>
       <div className="row">
-        <div className="shadow col-md-6 offset-md-3 border rounded p-4 mt-2">
+        <div className="p-4 mt-2 border rounded shadow col-md-6 offset-md-3">
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="mb-3">
               <label htmlFor="Name" className="form-lable">
@@ -74,7 +74,7 @@ export default function AddUser() {
               Add User
             </button>
 
-            <Link className="btn btn-danger mx-2" to="/">
+            <Link className="mx-2 btn btn-danger" to="/">
               Cancel User
             </Link>
           </form>
